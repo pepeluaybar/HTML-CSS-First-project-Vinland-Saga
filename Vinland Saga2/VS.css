@@ -1,0 +1,909 @@
+* { /* RESET GENERAL */ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: #0c0c0c;
+    color: #e7e2db;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    background-image: url(./IMG/Film\ Grains\ Textures.jpg);
+}
+.active{
+    color: #c92727;
+    text-shadow: 0 0 8px #c92727;
+}
+
+:root {
+    --blod-red: #c92727;
+    --warm-gold: #b4960d;
+    --ice-blue: #4a617d;       
+    --sage-green: #6b7d62;     
+    --muted-ivory: #e7e2db;
+    --deep-shadow: rgba(0,0,0,0.65);
+    --panel-bg: rgba(20, 20, 20, 0.55);
+}
+a {
+    text-decoration: none;
+    color: var(--warm-gold);
+}
+
+/* ───────────────────────────────────────── HEADER ───────────────────────────────────────── */
+
+header {
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    
+}
+
+header nav {
+    width: 60%;
+}
+
+header nav ul {
+    display: flex;
+    gap: 70px;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #c92727;
+    text-shadow: 0 0 8px #c92727;
+}
+
+header a img {
+    width: 160px;
+}
+
+
+ 
+/*INDEX CSS*/
+ 
+.index-body {
+    background: #0c0c0c;
+    color: #e7e2db;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    overflow-x: hidden;
+}
+
+ 
+/*NAVBAR*/
+ 
+
+.navbar .logo img {
+    width: 120px;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.6));
+}
+
+.navbar nav a {
+    margin-left: 35px;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #e7e2db;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #c92727;
+    text-shadow: 0 0 10px #c92727;
+}
+
+ 
+/*HERO*/
+ 
+.index-hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+    background-image: url('./IMG/INDEX/index_hero.jpg');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: inset 0 0 200px #000;
+}
+
+.index-hero .hero-overlay {
+    position: absolute;
+    inset: 0; 
+    background: radial-gradient(circle, rgba(0,0,0,0.2), rgba(0,0,0,0.85));
+}
+
+.index-hero .hero-content {
+    position: relative;
+    max-width: 900px;
+    text-align: center;
+    z-index: 10;
+}
+
+.index-hero h1 {
+    font-size: 5rem;
+    line-height: 1;
+    text-transform: uppercase;
+    text-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+
+.index-hero p {
+    margin-top: 20px;
+    font-size: 1.6rem;
+    opacity: 0.85;
+    letter-spacing: 2px;
+}
+
+/* Botones hero */
+.hero-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border: 1px solid #c92727;
+    color: #e7e2db;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: 0.3s;
+    
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(3px);
+}
+
+.btn:hover {
+    background: #c92727;
+    color: black;
+}
+
+ 
+/*               ABOUT SECTION               */
+ 
+.index-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 120px 80px;
+    gap: 60px;
+    align-items: center;
+}
+
+.index-about .about-text h2 {
+    font-size: 3.5rem;
+}
+
+.index-about .about-text p {
+    font-size: 1.4rem;
+    margin: 15px 0;
+    opacity: 0.9;
+}
+
+.deep-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #c92727;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.deep-link:hover {
+    text-shadow: 0 0 10px #c92727;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+ 
+/*           CHARACTER PREVIEW               */
+ 
+.index-characters-preview {
+    padding: 120px 40px;
+    text-align: center;
+}
+
+.index-characters-preview h2 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    opacity: 0.85;
+    margin-bottom: 50px;
+    font-size: 1.4rem;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    padding: 20px;
+}
+
+.char-card {
+    background: #111;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 25px #000, 0 0 20px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.char-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.char-card:hover {
+    transform: scale(1.05);
+    border: 1px solid #c92727;
+}
+
+/*                THEMES PREVIEW            */
+
+.index-themes {
+    padding: 110px 40px;
+    text-align: center;
+}
+
+.index-themes h2 {
+    font-size: 3.5rem;
+}
+
+.theme-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+.intro-themes .theme-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.theme-box {
+    background: #151515;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
+    transition: 0.3s;
+}
+
+.theme-box:hover {
+    border: 1px solid #c92727;
+    transform: scale(1.03);
+}
+
+/*            ICONIC MOMENTS                */
+
+.index-moments {
+    padding: 130px 40px;
+    text-align: center;
+}
+
+.moments-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.moment-box {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background: #111;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: inset 0 0 25px #000;
+}
+
+.moment-box img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.moment-text h3 {
+    font-size: 2.4rem;
+}
+
+ 
+/*                WHY WATCH                 */
+ 
+.index-why {
+    padding: 130px 80px;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.index-why h2 {
+    font-size: 3.4rem;
+    margin-bottom: 20px;
+}
+
+.index-why p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.fake-button {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 1px solid #c92727;
+    color: #c92727;
+    font-size: 1.4rem;
+    margin-top: 25px;
+}
+
+ 
+/*                   FOOTER                 */
+ 
+.main-footer {
+    margin-top: 100px;
+    padding: 50px 40px;
+    background: #0a0a0a;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+    background-image: url(./IMG/blood.jpg);
+}
+
+.footer-links a {
+    margin: 0 20px;
+    font-size: 1.3rem;
+    color: #e7e2db;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: black;
+}
+
+.footer-note {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+
+/*  ------- DEVELOPMENT  -------- */
+
+.dev-hero {
+  height: 100vh;
+  background-image: url('./IMG/DEV_IMG/dev_hero_bg.jpg.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: inset 0 0 160px rgba(0,0,0,0.7);
+  padding: 0 5%;
+  color: #e7e2db;
+}
+
+.dev-hero h1 {
+  font-size: 3.2rem;
+  letter-spacing: 2px;
+}
+
+.dev-hero .lead {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 900px;
+}
+
+/* base section */
+.dev-section {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  padding: 64px 6%;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.02) 100%);
+}
+
+.dev-section.reverse { flex-direction: row-reverse; }
+
+/* text column */
+.dev-text {
+  flex: 1;
+  min-width: 320px;
+}
+
+.dev-text h2 {
+  font-size: 2rem;
+  color: #c92727;
+  margin-bottom: 12px;
+}
+
+.dev-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #e7e2db;
+  margin-bottom: 12px;
+}
+
+/* blockquotes */
+.dev-text blockquote {
+  margin: 18px 0;
+  padding-left: 18px;
+  border-left: 4px solid rgba(201,39,39,0.9);
+  color: #f7eede;
+  font-style: italic;
+}
+
+.dev-text .emphasis {
+  color: #ffd7c0;
+  font-weight: 600;
+}
+
+.dev-text .callout {
+  background: rgba(201,39,39,0.06);
+  padding: 12px;
+  border-radius: 8px;
+  color: #f2e6de;
+}
+
+/* media column */
+.dev-media {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dev-media img, .dev-media video, .dev-media iframe {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* summary grid */
+.dev-summary {
+  padding: 64px 6%;
+  text-align: center;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 24px;
+}
+
+
+/* conclusion */
+.conclusion-cta {
+  margin-top: 28px;
+  opacity: 0.95;
+}
+
+.conclusion-cta a {
+  color: #ffd7b0;
+  text-decoration: none;
+  margin: 0 8px;
+  border-bottom: 1px dashed rgba(255,215,176,0.25);
+}
+
+/*  ----- INTRODUCTION PAGE STYLES   ----- */
+
+/* HERO */
+#intro-hero {
+    height: 100vh;
+    background-image: url('./IMG/INTRO_IMG/VINLAND\ SAGA.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    box-shadow: inset 0 0 150px #000;
+}
+
+.intro-hero-content h1 {
+    font-size: 4.5rem;
+    color: #e7e2db;
+    text-shadow: 0 0 30px #000;
+}
+
+.intro-hero-content p {
+    font-size: 1.7rem;
+    margin-top: 10px;
+    opacity: 0.85;
+}
+
+
+/* SPLIT SECTIONS */
+.intro-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 70px;
+    gap: 40px;
+    min-height: 80vh;
+    align-items: center;
+}
+
+.intro-split.reverse {
+    direction: rtl;
+}
+
+.intro-split.reverse .intro-text-block {
+    direction: ltr;
+}
+
+.intro-text-block {
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+.intro-text-block h2 {
+    color: #c92727;
+    margin-bottom: 15px;
+}
+
+/* MEDIA SIDE */
+.intro-media img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #000;
+}
+
+
+/* LONG SECTION */
+.intro-long {
+    padding: 90px 60px;
+    text-align: center;
+}
+
+.intro-long h2 {
+    font-size: 3rem;
+    color: #b4960d;
+}
+
+.intro-long-content {
+    max-width: 900px;
+    margin: 30px auto;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.intro-image-wide img {
+    width: 100%;
+    margin-top: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px #000;
+}
+
+
+/* THEMES */
+.intro-themes {
+    padding: 70px 40px;
+    text-align: center;
+}
+
+#theme-grid h2 {
+    font-size: 2.4rem;
+    color: #c92727;
+    margin-bottom: 20px;
+}
+
+.theme-card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: inset 0 0 30px #000;
+    transition: 0.3s ease;
+}
+
+.theme-card:hover {
+    transform: translateY(-5px);
+    border-color: #b4960d;
+}
+/*   -- MEANINGS  -- */
+
+.meanings-hero {
+  height: 100vh;
+  background-image: url('./IMG/MEAN_gifs/Analizando-Vinland-Saga-1-2_14.gif'); /* dramatic wide shot */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted-ivory);
+  text-align: center;
+  box-shadow: inset 0 0 200px rgba(0,0,0,0.75);
+}
+
+.meanings-hero .hero-inner h1 {
+  font-size: 3.4rem;
+  letter-spacing: 2px;
+  text-shadow: 0 6px 30px rgba(0,0,0,0.8);
+}
+
+ 
+
+.meanings-hero .subtitle {
+  margin-top: 12px;
+  font-size: 1.15rem;
+  opacity: 0.95;
+}
+
+/* Base section */
+.meanings-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  padding: 64px 6%;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.02);
+}
+
+/* alternate layout */
+.meanings-section.alt { background: linear-gradient(180deg, rgba(0,0,0,0.01), rgba(0,0,0,0.03)); }
+
+/* columns */
+.meanings-section .col.text { padding: 12px; }
+.meanings-section .col.media { display: flex; justify-content: center; align-items: center; }
+
+/* images & gifs */
+.meanings-section img {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* typographic accents */
+.meanings-section h2 {
+  font-size: 2.2rem;
+  color: var(--blod-red);
+  margin-bottom: 8px;
+}
+
+.meanings-section p { font-size: 1.05rem; line-height: 1.6; color: var(--muted-ivory); }
+
+
+/* FIGHTS GRID */
+.fights {
+  padding: 44px 6%;
+  background: linear-gradient(180deg, rgba(17,10,10,0.02), rgba(0,0,0,0.04));
+}
+
+.fights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 18px;
+}
+
+.fight-card {
+  display: grid;
+  gap: 18px;
+  align-items: center;
+  background: var(--ice-blue);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.02);
+}
+
+.fight-media img { width: 100%; height: auto; border-radius: 8px; object-fit: cover; }
+
+.fight-text h3 { color: var(--warm-gold); margin-bottom: 8px; font-size: 1.1rem; }
+.fight-text p { font-size: 0.95rem; color: #e7e2db; }
+
+/* Father-figures pair */
+#father-figures .col.media img { max-width: 520px; }
+
+/* TONAL MAP quick list */
+#tonal-map ul { margin-top: 10px; list-style: none; padding-left: 0; }
+#tonal-map ul li { padding: 8px 0; }
+
+/* conclusion */
+#meanings-conclusion { 
+  padding: 72px 6%; text-align: center;
+  display: flex; 
+}
+
+#meanings-conclusion .conclusion-text {
+  flex: 1; 
+  font-size: 1.1rem; 
+  line-height: 1.6; 
+  color: #e7e2db; 
+  max-width: 800px; 
+  margin: 0 auto;
+}
+#meanings-conclusion h2 {
+  font-size: 2.4rem;
+  color: #c92727;
+  margin-bottom: 20px;
+}
+
+/* CHARACTERS — HERO */
+
+.characters-hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: url('./IMG/CHAR_IMG/characters_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 180px #000;
+}
+
+.characters-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.characters-hero h1 {
+    font-size: 4rem;
+    z-index: 0; /* above overlay*/
+    color: #e7e2db;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.characters-hero p {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    opacity: .9;
+    z-index: o;
+}
+
+
+/* CHARACTER SECTIONS */
+
+.character-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 80px 60px;
+    gap: 40px;
+    align-items: center;
+}
+
+.character-section:nth-child(even) {
+    background: #111;
+}
+
+.char-media img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow:
+        0 0 22px rgba(0,0,0,0.8),
+        inset 0 0 18px rgba(0,0,0,0.6);
+}
+
+.char-text h2 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    color: #c92727;
+}
+
+.char-text p {
+    margin-bottom: 15px;
+    font-size: 1.3rem; 
+    line-height: 1.5;
+}
+
+.quote {
+    color: #b4960d;
+    text-shadow: 0 0 8px rgba(255,255,255,0.2);
+}
+
+.link-btn, .link-btn-wine {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 22px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: .3s ease;
+}
+
+.link-btn {
+    background: #c92727;
+    color: #fff;
+}
+
+.link-btn:hover {
+    background: #a01d1d;
+}
+
+.link-btn-wine {
+    background: #b4960d;
+    color: #000;
+}
+
+.link-btn-wine:hover {
+    background: #94790f;
+}
+
+/* SUPPORTING GRID */
+
+.supporting-grid {
+    padding: 100px 40px;
+    text-align: center;
+}
+
+.supporting-grid h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #c92727;
+}
+
+.supporting-grid .grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+
+.grid-card {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: end;
+    padding: 15px;
+    text-shadow: 0 0 10px black;
+    font-size: 1.6rem;
+    color: #fff;
+    transition: .3s ease;
+}
+
+.grid-card:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+.grid-card:nth-child(1){ background-image: url('./IMG/CHAR_IMG/i-wrote-a-fanfic-about-thorkell-the-tall-i-hope-you-like-it-v0-g4qe3fn3shff1.webp'); 
+}
+.grid-card:nth-child(2){ background-image: url('./IMG/CHAR_IMG/is-ragnar-morally-grey-or-good-v0-hrs5pwuabmkf1.webp'); 
+}
+.grid-card:nth-child(3){ background-image: url('./IMG/CHAR_IMG/descarga.jpg'); 
+}
+.grid-card:nth-child(4){ background-image: url('./IMG/CHAR_IMG/leif.jpg'); 
+}
